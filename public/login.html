@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+    .contenedor{
+        background: url("img/fondo.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .login{
+        background: url("img/caja_desenfoque.png");
+        background-repeat: no-repeat;
+        width: 40%;
+        position: absolute;
+        background-size: 100%;
+        height:100%;
+        left: 30%;
+    }
+    .submit{
+        background-color: #95C11F;
+        color: white;
+        border: none;
+        font-size: 30px;
+        border-radius: 10px;
+        height: 75px;
+        width: 89%;
+        margin-top: 10%;
+    }
+    .usuario{
+        padding-left: 13%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 30px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.30);
+        border: none;
+        color: #B2B2B1;
+        width: 76%;
+    }
+    .password{
+        padding-left: 13%;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        font-size: 30px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.30);
+        border: none;
+        margin-top: 5%;
+        color: #B2B2B1;
+        width: 76%;
+    }
+    .logo{
+        width: 80%;
+        margin-left: 12%;
+        margin-top: 5%;
+    }
+    form{
+        margin-left: 12%;
+        margin-top: 15%;
+    }
+    .iconopassword{
+        position: absolute;
+        top: 58%;
+        left: 14%;
+        width: 5%;
+    }
+    .iconousuario{
+        position: absolute;
+        top: 46.5%;
+        left: 15.5%;
+        width: 5%;
+    }
+    .linea2{
+        font-size: 42px;
+        position: absolute;
+        left: 21%;
+        color: white;
+        top:56%;
+    }
+    .linea1{
+        font-size: 42px;
+        position: absolute;
+        left: 21%;
+        color: white;
+        top:45%;
+    }
+    .lineaminima{
+        border-top: 0.5px white solid;
+        width: 5%;
+        margin-left:47%;
+        margin-top: 12%;
+    }
+    .recordarcontra{
+        border-top: white solid;
+        width: 70%;
+        margin-left: 16%;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        margin-top: 3%;
+    }
+
+    @media (max-width: 1400px) {
+        .login{
+            height: 667px;
+        }
+        .iconousuario{
+            top: 49%;
+        }
+        .iconopassword{
+            top: 62%;
+        }
+        .linea1{
+            top: 47.2%;
+        }
+        .linea2{
+            top: 60%;
+        }
+        .lineaminima{
+            margin-top: 4%;
+        }
+        .recordarcontra{
+            margin-top: 1.5%;
+        }
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>SoftDesk</title>
+</head>
+<body>
+<div class="contenedor">
+    <div class="login">
+        <img src="img/logo.png" class="logo">
+        <div>
+            <form>
+                     <div>
+                         <img src="img/usuario.png" class="iconousuario"><span class="linea1">|</span>
+                         <input type="text" name="usuario" placeholder="usuario" class="usuario">
+                     </div>
+                     <div>
+                         <img src="img/contraseña.png" class="iconopassword"><span class="linea2">|</span>
+                         <input type="text" name="password"  placeholder="contraseña" class="password">
+                     </div>
+                     <div>
+                         <input type="submit" value="INGRESAR" class="submit">
+                     </div>
+            </form>
+            <div class="lineaminima"> </div>
+            <div class="recordarcontra">
+                <label>Recordar mi Contraseña</label>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

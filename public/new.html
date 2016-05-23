@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+    .contenidobarra{
+        background: url("img/caja_desenfoque.png");
+        background-repeat: no-repeat;
+        position:absolute ;
+        height: 100%;
+        width: 20%;
+        background-size: cover;
+    }
+    .logobarra{
+        width: 100%;
+        margin-top: 12%;
+    }
+    .linea1{
+        width: 75%;
+        border-top: 0.05cm white solid;
+        margin-top: 25%;
+        margin-left: 5%;
+    }
+    .lista{
+        color: #95C11F;
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+    .lista div {
+        margin-top: 4%;
+        margin-left: 5%;
+    }
+    .copyright{
+        color: white;
+        margin-top: 45%;
+        font-size: 20px;
+        border-top: 0.05cm white solid ;
+        padding-top: 5%;
+        text-align: center;
+    }
+    @font-face {
+        font-family: kenyan;
+        src: url("img/Fonts/kenyan_coffee_rg.ttf");
+    }
+    body{
+        font-family: kenyan;
+        color: #555555;
+    }
+    .divsuperior {
+        margin-right: 0%;
+        width: 35%;
+        margin-left: 62%;
+        border-bottom: solid;
+        font-size: 25px;
+        vertical-align: top;
+        margin-top: -3%;
+    }
+    .imagenmenu{
+        width: 10%;
+        margin-left: 25%;
+    }
+    .imgusuario{
+        width: 11%;
+        margin-left: 5%;
+    }
+    .nombreusuario{
+        vertical-align: 50%;
+        margin-left: 5%;
+    }.lineusuario{
+         vertical-align: 50%;
+         margin-left: 5%;
+         font-size: 27px;
+     }
+    .buscador{
+        height: 45px;
+        font-size: 30px;
+        width: 100%;
+        padding-right: 20%;
+        border: 0.05cm #95C11F solid;
+        border-radius: 10px;
+        padding-left: 10%;
+    }
+    .imgbuscar{
+        position:absolute;
+        left: 44%;
+        top: 1.7%;
+        width: 2%;
+    }
+    .lineabuscador{
+        position: absolute;
+        border-left: #95C11F solid;
+        height: 33px;
+        left: 43%;
+        top:2%;
+    }
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 2px 2px 2px 2px;
+        border: none;
+        background: transparent url(img/desplegar_verde.png) no-repeat 5px center;
+        background-position: right;
+        background-size: 30px;
+        background-color: white;
+    }
+    .buscar{
+        width: 20%;
+        margin-left: 21%;
+    }
+    .nuevo{
+        margin-left: 47%;
+        font-size: 30px;
+        margin-top:5.5%;
+    }
+    .lineas1{
+        border-top: 0.15cm #95C11F solid ;
+        width: 3%;
+        position: absolute;
+        left: 43.5%;
+        top: 23.5%;
+    }
+    .lineas2{
+        border-top: 0.15cm #95C11F solid ;
+        width: 3%;
+        position: absolute;
+        left: 65%;
+        top: 23.5%;
+    }
+    .imgnuevo{
+        width: 10%;
+        margin-left: 35%;
+    }
+    .nuevodocumento{
+        margin-top: 5%;
+        cursor: pointer;
+        margin-left: 10%;
+    }
+    .entrada{
+        width: 12%;
+        background-color: #95C11F;
+        margin-left: 33%;
+        font-size: 35px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        padding-top: 1%;
+        padding-left: 1%;
+        padding-bottom: 1%;
+        padding-right: 1%;
+        margin-top: 1%;
+    }
+
+    .salidadocumento{
+        position: relative;
+        margin-left: 52%;
+        margin-top: -13%;
+        width: 25%;
+        cursor: pointer;
+    }
+    .salida{
+        width: 45%;
+        background-color: #95C11F;
+        margin-left: 33%;
+        font-size: 35px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        padding-top: 3%;
+        padding-left: 3%;
+        padding-bottom: 3%;
+        padding-right: 3%;
+        margin-top: 3%;
+
+    }
+
+    .imgsalida{
+        width: 39%;
+        margin-left: 35%;
+    }
+    .modalnuevo{
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+    }
+    .fondo{
+        background: url("img/caja_hoja.png");
+        background-size: 30%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        margin-left: 40%;
+        margin-top: 0%;
+        position: absolute;
+    }
+    .tituloactanueva{
+        margin-top: 2.5%;
+        margin-left: 2%;
+        border-bottom: #95C11F solid;
+        width: 15%;
+    }
+    .modalsalida{
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+    }
+    .tituloactanueva{
+        margin-top: 2.5%;
+        margin-left: 2%;
+        border-bottom: #95C11F solid;
+        width: 15%;
+    }
+    input{
+        border: none;
+        height: 45px;
+        font-size: 20px;
+        color: #6f6f6f;
+        margin-top: 1%;
+    }
+    select{
+        border: none;
+        height: 45px;
+        font-size: 20px;
+        color: #6f6f6f;
+        margin-top: 1%;
+    }
+    form{
+        margin-left: 3%;
+        margin-top: 3%;
+        overflow-x: hidden;
+    }
+    .tipoacta{
+        margin-top: 2%;
+        width: 15%;
+    }
+    .dependencia{
+        margin-top: 0%;
+        width: 15%;
+    }
+    .fecha{
+     width:9%;
+        margin-left: 1%;
+    }
+    .hora{
+        margin-left: 16.2%;
+        width: 9%;
+    }
+
+    input.cmn-toggle-round + label {
+        padding: 2px;
+        width: 60px;
+        height: 15px;
+        background-color: #dddddd;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+    }
+    input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -11px;
+        bottom: 1px;
+        content: "";
+    }
+    input.cmn-toggle-round + label:before {
+        right: 1px;
+        background-color: rgba(0, 0, 0, 0.31);
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+        -webkit-transition: background 0.4s;
+        -moz-transition: background 0.4s;
+        -o-transition: background 0.4s;
+        transition: background 0.4s;
+    }
+    input.cmn-toggle-round + label:after {
+        width: 20px;
+        height: 21px;
+        background-color: #c6c6c5;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        -webkit-transition: margin 0.4s;
+        -moz-transition: margin 0.4s;
+        -o-transition: margin 0.4s;
+        transition: margin 0.4s;
+    }
+    input.cmn-toggle-round:checked + label:before {
+        background-color: #6f6f6f;
+    }
+    input.cmn-toggle-round:checked + label:after {
+        margin-left: 60px;
+    }
+    .cmn-toggle {
+        position: absolute;
+        margin-left: -9999px;
+        visibility: hidden;
+    }
+    .cmn-toggle + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .empresa{
+        width: 25%;
+    }
+    .proveedor{
+        width: 25%;
+    }
+    .nombre{
+        width: 25%;
+    }
+    .nit{
+        width: 10%;
+    }
+    .direccion{
+        width: 14%;
+        margin-left: 1%;
+    }
+    .comentario{
+        width: 25%;
+    }
+    .scanner{
+        margin-left: 5%;
+        margin-top: 2.5%;
+        width: 4%;
+    }
+    .impresora{
+        margin-left: 1%;
+        width: 3%;
+    }
+    .scannersalida{
+        margin-left: 5%;
+        margin-top: 1.5%;
+        width: 4%;
+    }
+    .impresorasalida{
+        margin-left: 1%;
+        width: 3%;
+    }
+    .submit{
+        border-radius: 10px;
+        background-color: #3c3c3b;
+        color: white;
+        padding-left:2%;;
+        padding-right:2%;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: -2%;
+        margin-left: 2%;
+    }
+    .lineaacta{
+        width: 15%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.2%;
+    }
+    .lineafecha{
+       width: 9.2%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.45%;
+        margin-left:16%;
+    }
+    .lineahora{
+    width: 9%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+        margin-left:16.2%;
+    }
+    .lineadependencia{
+    width: 15%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+        margin-left:0%;
+    }
+    .lineaempresa{
+        width: 25%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .lineaproveedor{
+        width: 25%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .lineanombre{
+        width: 25%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .lineanit{
+        width: 10%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .lineadireccion{
+        width: 14%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.4%;
+        margin-left: 11%;
+    }
+    .lineacomentario{
+        width: 25%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .radicar{
+        margin-top: 1%;
+        font-size: 30px;
+        color: #6f6f6f;
+        margin-bottom: 0%;
+    }
+    .horasalida{
+        margin-left: 1.2%;
+        width: 9%;
+    }
+    .medio{
+        width: 12%;
+    }
+    .guia{
+        width: 12%;
+        margin-left: 1%;
+    }
+    .lineamedio{
+        width: 12%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.25%;
+    }
+    .lineaguia{
+        width: 12%;
+        height: 5px;
+        border-bottom: #6f6f6f solid;
+        border-right: #6f6f6f solid;
+        margin-top: -0.4%;
+        margin-left: 13.1%;
+    }
+    .nuevodocumento:hover{
+        transform: scale(1.2,1.2);
+    }
+    .salidadocumento:hover{
+        transform: scale(1.2,1.2);
+    }
+
+    @media (max-width: 1400px){
+        .lineaacta{
+            margin-top: -0.5%;
+        }
+        .lineafecha{
+            margin-top: -0.65%;
+        }
+        .lineahora{
+            margin-top: -0.45%;
+        }
+        .lineaempresa{
+            margin-top: -0.45%;
+        }
+        .lineaproveedor{
+            margin-top: -0.45%;
+        }
+        .lineanombre{
+            margin-top: -0.45%;
+        }
+        .lineanit{
+            margin-top: -0.45%;
+        }
+        .lineadireccion{
+            margin-top: -0.6%;
+        }
+        .lineacomentario{
+            margin-top: -0.45%;
+        }
+        form{
+            margin-top: 0%;
+        }
+        input{
+            font-size: 15px;
+            height: 30px;
+        }
+        select{
+            font-size: 15px;
+            height: 30px;
+            background-size: 20px;
+        }
+        .radicar{
+            font-size: 15px;
+        }
+        .salidadocumento{
+            position: relative;
+            margin-left: 50%;
+            margin-top: -19%;
+            width: 36%;
+            cursor: pointer;
+        }
+        .salida{
+            width: 45%;
+            background-color: #95C11F;
+            margin-left: 33%;
+            font-size: 35px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            padding-top: 3%;
+            padding-left: 3%;
+            padding-bottom: 3%;
+            padding-right: 3%;
+            margin-top: 3%;
+
+        }
+
+        .imgsalida{
+            width: 41%;
+            margin-left: 35%;
+        }
+        .imgnuevo{
+            width: 15%;
+            margin-left: 35%;
+        }
+        .nuevodocumento{
+            margin-top: 5%;
+            cursor: pointer;
+        }
+        .entrada{
+            width: 17%;
+            background-color: #95C11F;
+            margin-left: 33%;
+            font-size: 35px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-bottom: 1%;
+            padding-right: 1%;
+            margin-top: 1%;
+        }
+        .lineas1{
+            border-top: 0.15cm #95C11F solid ;
+            width: 3%;
+            position: absolute;
+            left: 41%;
+            top: 23.5%;
+        }
+        .lineas2{
+            border-top: 0.15cm #95C11F solid ;
+            width: 3%;
+            position: absolute;
+            left: 70%;
+            top: 23.5%;
+        }
+
+        .nuevo{
+            margin-left: 45%;
+            font-size: 30px;
+            margin-top:.5%;
+        }
+        .lineadependencia{
+            margin-top: -0.6%;
+        }
+        .imgbuscar{
+            margin-top: 0.7%;
+        }
+        .lineabuscador{
+            margin-top: 0.5%;
+        }
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SoftDesk</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('.modalnuevo').hide();
+                $('.entrada').click(function(){
+                   $('.modalnuevo').show();
+                });
+                $('.x').click(function(){
+                    $('.modalnuevo').hide();
+                });
+            $('.modalsalida').hide();
+            $('.salidadocumento').click(function(){
+                $('.modalsalida').show();
+            });
+            $('.x').click(function(){
+                $('.modalsalida').hide();
+                    });
+        });
+    </script>
+</head>
+<body>
+
+<div class="contenidobarra">
+    <img src="img/logo.png" class="logobarra">
+    <div class="linea1"></div>
+    <div class="lista">
+        <div>
+            <label>Entrada</label>
+        </div>
+
+        <div>
+            <label>Salida</label>
+        </div>
+
+        <div>
+            <label>Solicitudes</label>
+        </div>
+
+        <div>
+            <label>Archivo</label>
+        </div>
+    </div>
+    <div class="copyright">
+        <label>2016© copyright & work by SoftPlus</label>
+    </div>
+</div>
+<div class="buscar">
+    <input type="text" placeholder="Buscar..." class="buscador">
+    <div class="lineabuscador"></div>
+    <img src="img/buscar.png" class="imgbuscar">
+
+</div>
+<div class="divsuperior">
+    <div>
+        <img src="img/menu.png" class="imagenmenu">
+        <label class="nombreusuario">Luis Felipe Hurtado</label>
+        <span class="lineusuario">|</span>
+        <img src="img/perfil.png" class="imgusuario">
+    </div>
+
+</div>
+
+<div class="contenido">
+    <div class="nuevo">
+        <div class="lineas1"></div>
+        <h1> Busqueda General </h1>
+        <div class="lineas2"></div>
+    </div>
+    <div class="nuevodocumento">
+        <img src="img/entrada.png" class="imgnuevo">
+            <div class="entrada">
+                <label>Entrada</label>
+            </div>
+    </div>
+    <div class="salidadocumento">
+        <img src="img/salida.png" class="imgsalida">
+        <div class="salida">
+            <label>Salida</label>
+        </div>
+    </div>
+</div>
+
+<div class="modalnuevo">
+    <div style="position: absolute; width: 100%; height: 100%" class="x"></div>
+    <div class="fondo">
+        <div class="tituloactanueva">
+            <label style="font-size: 40px">Tipo de<br> <span style="font-size: 60px">Actas</span></label>
+        </div>
+        <div class="formulario">
+            <form>
+
+            <select class="tipoacta">
+                <option>Tipo de Acta</option>
+            </select><input type="date" class="fecha"><br>
+
+            <div class="lineaacta"></div>
+            <div class="lineafecha"></div>
+
+
+            <input type="time" class="hora" placeholder="hora">
+                <div class="lineahora"></div>
+            <div class="radicar">
+            <label>Radicar documentos en bloque</label>
+
+                    <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                    <label for="cmn-toggle-1" style="margin-top: -1.5%; margin-left: 20.5%"></label>
+
+            </div>
+
+            <select class="empresa">
+                <option>Empresa que Radica</option>
+            </select>
+                <div class="lineaempresa"></div>
+
+            <select class="proveedor">
+                <option>Proveedor</option>
+            </select>
+                <div class="lineaproveedor"></div>
+
+            <input type="text" placeholder="Nombre" class="nombre">
+                <div class="lineanombre"></div>
+
+            <input type="text" placeholder="Nit" class="nit"><input type="text" placeholder="Dirección" class="direccion">
+                <div class="lineanit"></div>
+                <div class="lineadireccion"></div>
+
+
+            <input type="text" placeholder="Comentario..." class="comentario">
+                <div class="lineacomentario"></div>
+
+
+                <img src="img/scanner.png" class="scanner">
+                <img src="img/impresora.png" class="impresora">
+            <input type="submit" value="RADICAR" class="submit">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="modalsalida">
+    <div style="position: absolute; width: 100%; height: 100%" class="x"></div>
+    <div class="fondo">
+        <div class="tituloactanueva">
+            <label style="font-size: 40px">Radicado de<br> <span style="font-size: 60px">Salida</span></label>
+        </div>
+        <div class="formulario">
+            <form>
+
+            <select class="tipoacta">
+                <option>Tipo de Documento</option>
+            </select><input type="date" class="fecha"><br>
+
+            <div class="lineaacta"></div>
+            <div class="lineafecha"></div>
+
+
+                <select class="dependencia">
+                    <option>Dependencia</option>
+                </select><input type="time" class="horasalida">
+                <div class="lineahora"></div>
+                <div class="lineadependencia"></div>
+            <div class="radicar">
+            <label>Radicar documentos en bloque</label>
+
+                    <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                    <label for="cmn-toggle-2" style="margin-top: -1.5%; margin-left: 20.5%"></label>
+
+            </div>
+
+            <select class="empresa">
+                <option>Destino</option>
+            </select>
+                <div class="lineaempresa"></div>
+
+            <select class="proveedor">
+                <option>Destinatario</option>
+            </select>
+                <div class="lineaproveedor"></div>
+
+            <input type="text" placeholder="Nombre" class="nombre">
+                <div class="lineanombre"></div>
+
+            <input type="text" placeholder="Nit" class="nit"><input type="text" placeholder="Dirección" class="direccion">
+                <div class="lineanit"></div>
+                <div class="lineadireccion"></div>
+
+
+            <input type="text" placeholder="Asunto..." class="comentario">
+                <div class="lineacomentario"></div>
+
+                <input type="text" placeholder="Medio de envio..." class="medio">
+                <input type="text" placeholder="Guia..." class="guia">
+                <div class="lineamedio"></div>
+                <div class="lineaguia"></div>
+                <img src="img/scanner.png" class="scannersalida">
+                <img src="img/impresora.png" class="impresorasalida">
+            <input type="submit" value="RADICAR" class="submit">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
