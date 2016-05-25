@@ -178,7 +178,7 @@
         width: 100%;
         height: 100%;
         margin-left: 40%;
-        margin-top: 1%;
+        margin-top: 0.2%;
         position: absolute;
     }
     .tituloactanueva{
@@ -382,7 +382,7 @@
         border-right: #c6c6c5 solid;
     }
     .formularioentrada{
-        margin-top: 11%;
+        margin-top: 6%;
     }
     .fechanuevaentrega{
         width:30%;
@@ -651,7 +651,7 @@
         }
         .radicar{
             margin-top: 1%;
-            font-size: 25px;
+            font-size: 22px;
             color: #c6c6c5;
             margin-bottom: 1%;
         }
@@ -720,6 +720,15 @@
         text-decoration: none;
         color:  #95C11F;
     }
+    .radicarentrada{
+        float: right;
+        margin-right: 7%;
+        border-top: #95C11F solid;
+        color:#95C11F;
+        font-size: 30px;
+        margin-bottom: 0%;
+    }
+
 </style>
 
 <head>
@@ -733,6 +742,13 @@
             });
             $('.x').click(function(){
                 $('.modalnuevo').hide();
+            });
+            $('.radicarentrada').hover(function(){
+               $(this).css('color','#c6c6c5');
+               $(this).css('border-top-color','#c6c6c5');
+            },function(){
+                $(this).css('color','#95C11F');
+                $(this).css('border-top-color','#95C11F');
             });
         });
     </script>
@@ -809,7 +825,10 @@
     <div class="cuadros"></div>
     <div class="cuadros"></div>
 </div>
-    <div style="float: right; margin-right: 7%;border-top: #95C11F solid;: #95C11F solid; color:#95C11F; font-size: 30px; margin-bottom: 0%;" class="radicarentrada">
+    <div  class="radicarentrada">
+        <label>HACER SOLICITUD</label>
+    </div>
+    <div  class="radicarentrada">
         <label>RADICAR ENTRADA</label>
     </div>
 
