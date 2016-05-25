@@ -31,7 +31,7 @@
     }
     .copyright{
         color: white;
-        margin-top: 127%;
+        margin-top: 100%;
         font-size: 20px;
         border-top: 0.05cm white solid ;
         padding-top: 5%;
@@ -132,7 +132,7 @@
     .busqueda{
         margin-top: 9%;
         font-size: 21px;
-        margin-left: -0.5%;
+        margin-left: 1.5%;
 
     }
     .lineas1{
@@ -204,10 +204,6 @@
     .tipoacta{
         margin-top: 2%;
         width: 60%;
-    }
-    .fecha{
-        width:8.1%;
-        margin-left: 1%;
     }
     .hora{
         margin-left: 16.2%;
@@ -294,7 +290,7 @@
         width: 24.2%;
     }
     .nit{
-        width: 9.2%;
+        width: 44%;
     }
     .direccion{
         width: 13.2%;
@@ -331,9 +327,9 @@
         margin-left: 1.5%;
     }
     .lineafecha{
-        width: 8.5%;
-        margin-top: -0.45%;
-        margin-left:16.6%;
+        margin-top: -1.6%;
+        width: 32.8%;
+        margin-left: 63%;
     }
     .lineahora{
         width: 8.5%;
@@ -356,9 +352,9 @@
         margin-left: 0.5%;
     }
     .lineanit{
-        width: 9.5%;
+        width: 44%;
         margin-top: -0.1%;
-        margin-left:0.5%;
+        margin-left:3%;
     }
     .lineadireccion{
         width: 13.5%;
@@ -499,7 +495,7 @@
         width:43%;
         margin-left: 2.5%;
     }
-    .iconosnuevaentrada{
+    .iconossalida{
         margin-left: 25%;
     }
     .scanner{
@@ -524,7 +520,7 @@
     .spn {
         font-size: 72px;
     }
-    .submitnuevaentrada{
+    .submit{
         border-radius: 10px;
         background-color: #3c3c3b;
         color: white;
@@ -539,6 +535,10 @@
         padding-bottom:10%;
         float: right;
         margin-right: 10%;
+    }
+    .fecha{
+        width:30%;
+        margin-left: 1%;
     }
     @media (max-width: 1400px) {
         .lineas1{
@@ -565,16 +565,13 @@
             margin-left: 4%;
         }
         .copyright{
-            margin-top: 100%;
+            margin-top: 87%;
         }
         .busqueda{
             margin-top: 5.5%;
         }
         .lineaacta{
             margin-top: -0.5%;
-        }
-        .lineafecha{
-            margin-top: -0.65%;
         }
         .lineahora{
             margin-top: -0.45%;
@@ -639,8 +636,8 @@
             margin-top: 1.5%;
         }
         .lineadependencia{
-              margin-top: -0.9%;
-          }
+            margin-top: -0.9%;
+        }
         .lineahoranuevaentrega{
             margin-top: -1.6%;
 
@@ -695,7 +692,7 @@
         .guia{
             width: 42%;
         }
-        .iconosnuevaentrada{
+        .iconossalida{
             margin-left: 23%;
         }
         .tituloactanuevaentrada{
@@ -704,12 +701,17 @@
         .spn{
             font-size: 50px;
         }
-        .submitnuevaentrada {
+        .submit {
             padding-left: 10%;
             padding-right: 10%;
             padding-top: 0.5%;
             padding-bottom:2%;
 
+        }
+        .lineafecha
+        {
+            margin-top: -1.6%;
+            width: 32.8%;
         }
     }
 
@@ -744,11 +746,11 @@
     <div class="linea1"></div>
     <div class="lista">
         <div>
-            <label style="color:white;">Entrada</label>
+            <label>Entrada</label>
         </div>
 
         <div>
-            <label>Salida</label>
+            <label style="color:white;">Salida</label>
         </div>
 
         <div>
@@ -788,7 +790,7 @@
 <div class="contenidocentral">
     <div class="busqueda">
         <div class="lineas1"></div>
-        <label style="font-size: 60px;"> Entrada </label>
+        <label style="font-size: 60px;"> Salida </label>
         <div class="lineas2"></div>
     </div>
 
@@ -796,7 +798,7 @@
         <label class="titulos">Número de Radicado</label>
         <label class="titulos">Fecha de Radicado</label><img src="img/desplegar_gris.png" class="iconoflecha">
         <label class="titulos">Tipo de Documento</label><img src="img/desplegar_gris.png" class="iconoflecha">
-        <label class="titulos">Nuevo</label>
+        <label class="titulos">Destinatario</label>
     </div>
     <div class="cuadros"></div>
     <div class="cuadros"></div>
@@ -805,18 +807,17 @@
     <div class="cuadros"></div>
     <div class="cuadros"></div>
 </div>
-    <div style="float: right; margin-right: 7%;border-top: #95C11F solid;: #95C11F solid; color:#95C11F; font-size: 30px; margin-bottom: 0%;" class="radicarentrada">
-        <label>RADICAR ENTRADA</label>
-    </div>
-
+<div style="float: right; margin-right: 7%;border-top: #95C11F solid;: #95C11F solid; color:#95C11F; font-size: 30px; margin-bottom: 0%;" class="radicarentrada">
+    <label>RADICAR SALIDA</label>
+</div>
 <div class="modalnuevo">
     <div style="position: absolute; width: 100%; height: 100%" class="x"></div>
     <div class="fondo" style="width: 30%">
 
-        <div class="tituloactanuevaentrada">
-            <label class="act">Radicado de<br> <span class="spn">ENTRADA</span></label>
+        <div class="tituloactanueva">
+            <label class="act">Radicado de<br> <span class="spn">Salida</span></label>
         </div>
-        <div class="formularioentrada">
+        <div class="formulario">
             <form ng-submit="uploadPic2(adjunto)">
 
                 <select class="tipoacta" ng-model="tipoactaradicadoentrada">
@@ -830,11 +831,11 @@
 
                 </select>
 
-                <input type="text" id="departure" placeholder="DD-MM-AA" class="textbox-n fechanuevaentrega" ng-model="fecharadicadoentrada" />
+                <input type="text" id="departure" placeholder="DD-MM-AA" class="textbox-n fecha" ng-model="fecharadicadoentrada" />
                 <br>
 
                 <div class="lineaacta linea"></div>
-                <div class="lineafechanuevaentrega linea"></div>
+                <div class="lineafecha linea"></div>
 
                 <select class="dependencia" ng-model="dependenciaradicadoentrada">
                     <option value="">Dependencia</option>
@@ -848,17 +849,17 @@
                 </select>
 
 
-                <input type="text" id="alarm" class="form-control input-small horanuevaentrega "  placeholder="Hora"  ng-model="horaradicadoentrada"/>
+                <input type="text" id="alarm" class="form-control input-small hora "  placeholder="Hora"  ng-model="horaradicadoentrada"/>
                 <!--<input type="text" class="hora" ng-model="horaradicadoentrada" placeholder="Hora" onfocus="(this.type='time')">-->
 
                 <div class="lineadependencia linea"></div>
-                <div class="lineahoranuevaentrega linea"></div>
+                <div class="lineahora linea"></div>
 
                 <div class="radicar">
                     <label>Radicar documentos en bloque</label>
 
                     <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="cmn-toggle-1" style="float: right;margin-top: 3%;margin-right: 6.5%;"></label>
+                    <label for="cmn-toggle-1" style="margin-top: -3.5%; margin-left: 73.5%"></label>
 
                 </div>
 
@@ -894,8 +895,8 @@
                 <input type="text" placeholder="Nombre..." class="nombre" ng-model="nombreradicadoentrada">
                 <div class="lineanombre linea"></div>
 
-                <input type="text" placeholder="Nit..." class="nitnuevaentrega" ng-model="nitradicadoentrada"><input type="text" placeholder="Dirección..." class="direccion" ng-model="direccionradicadoentrada">
-                <div class="lineanitnuevaentrega linea"></div>
+                <input type="text" placeholder="Nit..." class="nit" ng-model="nitradicadoentrada"><input type="text" placeholder="Dirección..." class="direccion" ng-model="direccionradicadoentrada">
+                <div class="lineanit linea"></div>
                 <div class="lineadireccion linea"></div>
 
 
@@ -903,10 +904,10 @@
                 <div class="lineaasunto linea"></div>
 
                 <input type="text" placeholder="Medio recepción" class="recepcion" ng-model="recepcionradicadoentrada"><input type="text" placeholder="Guia..." class="guia" ng-model="guiaradicadoentrada">
-                <div class="linerecepcionentra linea"></div>
+                <div class="lineanit linea"></div>
                 <div class="lineaguia linea"></div>
 
-                <div class="iconosnuevaentrada">
+                <div class="iconossalida">
                     <!--<md-button class="md-fab md-fab-top-left left scanner" aria-label="Insert Drive" >-->
                         <!--<label for="input-file-id">-->
                             <!--<md-icon md-svg-src="/images/escanner.svg" style="width: 30px; height: 30px;"></md-icon>-->
@@ -929,9 +930,8 @@
 
                     <img src="img/scanner.png" class="scanner">
                     <img src="img/impresora.png" class="impresora">
-                    <input type="submit" value="RADICAR" class="submitnuevaentrada">
+                    <input type="submit" value="RADICAR" class="submit">
                 </div>
-
             </form>
 
         </div>
