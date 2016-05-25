@@ -31,11 +31,13 @@
     }
     .copyright{
         color: white;
-        margin-top: 45%;
+        margin-top: 100%;
         font-size: 20px;
         border-top: 0.05cm white solid ;
         padding-top: 5%;
         text-align: center;
+        width: 83%;
+        margin-left: 7%;
     }
     @font-face {
         font-family: kenyan;
@@ -46,31 +48,39 @@
         color: #555555;
     }
     .divsuperior {
-        margin-right: 0%;
-        width: 35%;
-        margin-left: 62%;
-        border-bottom: solid;
+        margin-right: 5%;
+        width: 28%;
+        float: right;
+        border-bottom:0.025cm solid;
         font-size: 25px;
         vertical-align: top;
-        margin-top: -3%;
+        margin-top: -2.5%;
     }
     .imagenmenu{
-        width: 10%;
+        width: 7%;
         margin-left: 25%;
     }
     .imgusuario{
-        width: 11%;
-        margin-left: 5%;
+        width: 9%;
+        margin-right: 0;
+        float: right;
+        margin-top: -1%;
+        padding-bottom:1.5%;
     }
     .nombreusuario{
         vertical-align: 50%;
-        margin-left: 5%;
+        float: right;
+        margin-right: 5%;
+
     }.lineusuario{
          vertical-align: 50%;
-         margin-left: 5%;
          font-size: 27px;
+         float: right;
+         margin-right: 3%;
+         padding-bottom: 1%;
      }
     .buscador{
+        margin-top: 7%;
         height: 45px;
         font-size: 30px;
         width: 100%;
@@ -81,16 +91,16 @@
     }
     .imgbuscar{
         position:absolute;
-        left: 44%;
-        top: 1.7%;
+        left: 48.5%;
+        top: 4.2%;
         width: 2%;
     }
     .lineabuscador{
         position: absolute;
         border-left: #95C11F solid;
         height: 33px;
-        left: 43%;
-        top:2%;
+        left: 47.5%;
+        top:4.5%;
     }
     select{
         -webkit-appearance: none;
@@ -105,7 +115,13 @@
     }
     .buscar{
         width: 20%;
-        margin-left: 21%;
+        margin-left: 25%;
+    }
+    .busqueda{
+        margin-top: 9%;
+        font-size: 21px;
+        margin-left: 1.5%;
+
     }
     .nuevo{
         margin-left: 47%;
@@ -485,6 +501,18 @@
     }
 
     @media (max-width: 1400px){
+        .buscar{
+        }
+        .imgbuscar{
+            top: 4.7%;
+            width: 2%;
+            left: 52.5%;
+        }
+        .lineabuscador{
+            top: 5%;
+            left: 51.5%;
+            height: 23px;
+        }
         .lineaacta{
             margin-top: -0.5%;
         }
@@ -605,6 +633,9 @@
         .lineabuscador{
             margin-top: 0.5%;
         }
+        .copyright{
+            margin-top: 87%;
+        }
     }
 </style>
 
@@ -665,12 +696,12 @@
 </div>
 <div class="divsuperior">
     <div>
-        <img src="img/menu.png" class="imagenmenu">
-        <label class="nombreusuario">Luis Felipe Hurtado</label>
-        <span class="lineusuario">|</span>
+        <!--<img src="img/menu.png" class="imagenmenu">-->
         <img src="img/perfil.png" class="imgusuario">
-    </div>
+        <span class="lineusuario">|</span>
+        <label class="nombreusuario">Luis Felipe Hurtado</label>
 
+    </div>
 </div>
 
 <div class="contenido">
@@ -693,127 +724,6 @@
     </div>
 </div>
 
-<div class="modalnuevo">
-    <div style="position: absolute; width: 100%; height: 100%" class="x"></div>
-    <div class="fondo">
-        <div class="tituloactanueva">
-            <label style="font-size: 40px">Tipo de<br> <span style="font-size: 60px">Actas</span></label>
-        </div>
-        <div class="formulario">
-            <form>
-
-            <select class="tipoacta">
-                <option>Tipo de Acta</option>
-            </select><input type="date" class="fecha"><br>
-
-            <div class="lineaacta"></div>
-            <div class="lineafecha"></div>
-
-
-            <input type="time" class="hora" placeholder="hora">
-                <div class="lineahora"></div>
-            <div class="radicar">
-            <label>Radicar documentos en bloque</label>
-
-                    <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="cmn-toggle-1" style="margin-top: -1.5%; margin-left: 20.5%"></label>
-
-            </div>
-
-            <select class="empresa">
-                <option>Empresa que Radica</option>
-            </select>
-                <div class="lineaempresa"></div>
-
-            <select class="proveedor">
-                <option>Proveedor</option>
-            </select>
-                <div class="lineaproveedor"></div>
-
-            <input type="text" placeholder="Nombre" class="nombre">
-                <div class="lineanombre"></div>
-
-            <input type="text" placeholder="Nit" class="nit"><input type="text" placeholder="Dirección" class="direccion">
-                <div class="lineanit"></div>
-                <div class="lineadireccion"></div>
-
-
-            <input type="text" placeholder="Comentario..." class="comentario">
-                <div class="lineacomentario"></div>
-
-
-                <img src="img/scanner.png" class="scanner">
-                <img src="img/impresora.png" class="impresora">
-            <input type="submit" value="RADICAR" class="submit">
-            </form>
-        </div>
-
-    </div>
-</div>
-
-<div class="modalsalida">
-    <div style="position: absolute; width: 100%; height: 100%" class="x"></div>
-    <div class="fondo">
-        <div class="tituloactanueva">
-            <label style="font-size: 40px">Radicado de<br> <span style="font-size: 60px">Salida</span></label>
-        </div>
-        <div class="formulario">
-            <form>
-
-            <select class="tipoacta">
-                <option>Tipo de Documento</option>
-            </select><input type="date" class="fecha"><br>
-
-            <div class="lineaacta"></div>
-            <div class="lineafecha"></div>
-
-
-                <select class="dependencia">
-                    <option>Dependencia</option>
-                </select><input type="time" class="horasalida">
-                <div class="lineahora"></div>
-                <div class="lineadependencia"></div>
-            <div class="radicar">
-            <label>Radicar documentos en bloque</label>
-
-                    <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="cmn-toggle-2" style="margin-top: -1.5%; margin-left: 20.5%"></label>
-
-            </div>
-
-            <select class="empresa">
-                <option>Destino</option>
-            </select>
-                <div class="lineaempresa"></div>
-
-            <select class="proveedor">
-                <option>Destinatario</option>
-            </select>
-                <div class="lineaproveedor"></div>
-
-            <input type="text" placeholder="Nombre" class="nombre">
-                <div class="lineanombre"></div>
-
-            <input type="text" placeholder="Nit" class="nit"><input type="text" placeholder="Dirección" class="direccion">
-                <div class="lineanit"></div>
-                <div class="lineadireccion"></div>
-
-
-            <input type="text" placeholder="Asunto..." class="comentario">
-                <div class="lineacomentario"></div>
-
-                <input type="text" placeholder="Medio de envio..." class="medio">
-                <input type="text" placeholder="Guia..." class="guia">
-                <div class="lineamedio"></div>
-                <div class="lineaguia"></div>
-                <img src="img/scanner.png" class="scannersalida">
-                <img src="img/impresora.png" class="impresorasalida">
-            <input type="submit" value="RADICAR" class="submit">
-            </form>
-        </div>
-
-    </div>
-</div>
 
 </body>
-</html>
+</h
