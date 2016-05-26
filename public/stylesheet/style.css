@@ -148,6 +148,20 @@ body{
     left: 40.5%;
     top: 23.5%;
 }
+.lineas1new{
+    border-top: 0.15cm #95C11F solid ;
+    width: 3%;
+    position: absolute;
+    left: 26%;
+    top: 23.5%;
+}
+.lineas2new{
+    border-top: 0.15cm #95C11F solid ;
+    width: 3%;
+    position: absolute;
+    left: 40.5%;
+    top: 23.5%;
+}
 .iconoflecha{
     width: 2.5%;
     margin-left: 1%;
@@ -568,18 +582,19 @@ input.cmn-toggle-round:checked + label:after {
 }
 
 .imgnuevo{
-    width: 10%;
+    width: 72%;
     margin-left: 35%;
 }
 .nuevodocumento{
     position: relative;
     margin-top: 5%;|
     cursor: pointer;
-    margin-left: -2%;
+    margin-left: 33%;
+    width: 200px;
 }
 
 .entrada{
-    width: 12%;
+    width: 75%;
     background-color: #95C11F;
     margin-left: 33%;
     font-size: 35px;
@@ -597,7 +612,7 @@ input.cmn-toggle-round:checked + label:after {
     position: relative;
     margin-left: 52%;
     margin-top: -13%;
-    width: 25%;
+    width: 26%;
     cursor: pointer;
 }
 
@@ -609,11 +624,11 @@ input.cmn-toggle-round:checked + label:after {
     text-align: center;
     color: white;
     border-radius: 10px;
-    padding-top: 3%;
-    padding-left: 3%;
-    padding-bottom: 3%;
-    padding-right: 3%;
-    margin-top: 3%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    margin-top: 1%;
 
 }
 .imgsalida{
@@ -733,9 +748,6 @@ body{
     .copyright{
         margin-top: 63%;
     }
-    .busqueda{
-        margin-top: 7%;
-    }
     .lista{
         font-size: 25px;
     }
@@ -759,10 +771,18 @@ body{
         top: 22.5%;
         left: 41.5%;
     }
+    .lineas1new{
+        left: 40%;
+        top: 22.5%;
+    }
+    .lineas2new{
+        top: 22.5%;
+        left: 70.5%;
+    }
 
     .busqueda{
-        margin-top: 5.5%;
-        margin-left: -1.2%;
+        margin-top: 11.5%;
+        margin-left: 0.5%;
     }
     .lineaacta{
         margin-top: -0.5%;
@@ -908,24 +928,12 @@ body{
     .salidadocumento{
         position: relative;
         margin-left: 50%;
-        margin-top: -19%;
-        width: 36%;
+        margin-top: -13%;
+        width: 26%;
         cursor: pointer;
     }
     .salida{
         width: 45%;
-        background-color: #95C11F;
-        margin-left: 33%;
-        font-size: 35px;
-        text-align: center;
-        color: white;
-        border-radius: 10px;
-        padding-top: 3%;
-        padding-left: 3%;
-        padding-bottom: 3%;
-        padding-right: 3%;
-        margin-top: 3%;
-
     }
     .imgsalida{
         width: 41%;
@@ -933,7 +941,6 @@ body{
     }
 
     .imgnuevo{
-        width: 15%;
         margin-left: 35%;
     }
     .nuevodocumento{
@@ -942,12 +949,12 @@ body{
     }
 
     .entrada{
-        width: 17%;
+        width: 75%;
     }
     .nuevo{
         margin-left: 45%;
         font-size: 30px;
-        margin-top:4.5%;
+        margin-top:8.5%;
     }
     .submitnuevaentrada {
         padding-left: 10%;
