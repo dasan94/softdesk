@@ -867,6 +867,21 @@ form{
     font-family:kenyan;
     margin-top: 2%;
 }
+.titulodigitalizado{
+    margin-top: 12.5%;
+    margin-left:22%;
+    font-size: 50px;
+    font-family: kenyan;
+}
+.imgdigitalizando{
+    width: 100%;
+}
+.digitalizado{
+    width: 40%;
+    margin-left: 0;
+    margin-right:0;
+    margin: auto;
+}
 @media (max-width: 1400px) {
     .imgbuscar{
         top: 3.5%;
